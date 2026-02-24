@@ -2,14 +2,16 @@ import itertools
 import joblib
 import pandas as pd
 import streamlit as st
-
+from pathlib import Path
 
 # -----------------------------
-# FILES
+# FILES (path-safe for Streamlit Cloud)
 # -----------------------------
-PROFILES_CSV = "data/syracuse_player_profiles.csv"
-ACC_PROFILES_CSV = "data/acc_player_profiles.csv"
-MODEL_PATH = "data/lineup_model.joblib"
+BASE_DIR = Path(__file__).resolve().parent
+
+PROFILES_CSV = BASE_DIR / "data" / "syracuse_player_profiles.csv"
+ACC_PROFILES_CSV = BASE_DIR / "data" / "acc_player_profiles.csv"
+MODEL_PATH = BASE_DIR / "data" / "lineup_model.joblib"
 
 # Load ACC profiles
 acc_profiles = pd.read_csv(ACC_PROFILES_CSV)
