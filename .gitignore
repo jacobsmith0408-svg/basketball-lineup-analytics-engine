@@ -1,6 +1,26 @@
-.venv/
+# Python
 __pycache__/
 *.pyc
+*.pyo
+*.pyd
+.pytest_cache/
+
+# Envs
+.venv/
+venv/
+.env
+
+# OS
 .DS_Store
-data/
+
+# IDE
 .idea/
+.vscode/
+
+# Streamlit
+.streamlit/
+
+# Outputs
+*.csv
+/data/matchups_*.csv
+/data/ranked_lineups_*.csv

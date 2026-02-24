@@ -54,7 +54,7 @@ def evaluate_lineup(season: int, players: list[str]) -> dict:
 
 
 if __name__ == "__main__":
-    season = 2025
+    season = 2026
     players = list_players(season)
     print(f"Syracuse players in {season}: {len(players)}")
     print(players)
