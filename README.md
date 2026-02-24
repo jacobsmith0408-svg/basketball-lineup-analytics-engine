@@ -81,3 +81,11 @@ streamlit run app.py
 - Model performance depends on feature quality and training data
 - Matchup logic is heuristic-based (Level-1 interaction layer)
 - Designed as a prototype decision-support tool, not a production analytics platform
+
+## Engineering Notes
+
+- Deployed via Streamlit Cloud with GitHub CI-based redeploys.
+- Path-safe file loading using `pathlib` to support Linux-based cloud environments.
+- Constraint-based lineup generation using combinatorics (`itertools.combinations`).
+- Model predictions layered with reliability penalties, fatigue multipliers, and matchup heuristics.
+- Results exportable to CSV for scouting workflow integration.
