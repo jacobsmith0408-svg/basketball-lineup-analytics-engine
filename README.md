@@ -6,6 +6,10 @@ This application evaluates every viable 5-man lineup combination using advanced 
 
 Designed as a sports analytics / basketball operations tool.
 
+[![Live Demo](https://img.shields.io/badge/Live%20Demo-Open-brightgreen)](https://YOUR-APP-URL-HERE)
+
+👉 **Live Demo:** https://YOUR-APP-URL-HERE
+
 ## Core Capabilities
 **1. Lineup Optimization**
 Ranks all valid 5-man combinations from a configurable player pool based on:
