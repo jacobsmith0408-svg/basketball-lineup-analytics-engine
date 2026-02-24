@@ -8,47 +8,30 @@ Designed as a sports analytics / basketball operations tool.
 
 👉 **Live Demo:** (https://basketball-lineup-analytics-engine.streamlit.app/)
 
-## Core Capabilities
-**1. Lineup Optimization**
-Ranks all valid 5-man combinations from a configurable player pool based on:
+## What this does
+**Lineup Recommendations**
+- Ranks all 5-man combinations from a minutes-based player pool
+- Supports roster constraints (min guards, min bigs, max centers)
+- Optimizes for game-state priorities (Balanced / Need a bucket / Get stops / Protect the ball / Win the glass)
 
-- Predicted Net Rating (ML model)
-- Offensive and Defensive Efficiency
-- Ball Security
-- Rebounding Impact
--Reliability Penalty (low-minute shrinkage)
-- Contextual Objective Weighting
-Constraints supported:
-- Minimum guards
-- Minimum bigs
-- Maximum centers
+**Substitution Assistant**
+- Given the current 5 + bench, suggests the best **one-for-one** substitutions
+- Uses the same objective + constraints as the lineup ranking engine
 
-**2. Game-State Simulation**
-Adjust lineup rankings dynamically based on:
+**Matchups vs ACC Opponents**
+- Scores Syracuse 5-man counters vs a specific opponent 5-man lineup
+- Opponent lineup modes: auto (top minutes), archetype (Big/Small/Shooting/Defense), manual
 
-- Score margin
-- Minutes remaining
-- Strategic priority (Balanced, Need a Bucket, Get Stops, etc.)
-- Fatigue level & fatigue impact strength
-- Objective weights automatically adjust based on context.
+## Screenshots
+**Lineup Recommendations**
+<img width="1440" height="777" alt="Screenshot 2026-02-24 at 2 18 23 PM" src="https://github.com/user-attachments/assets/4f81e5a2-6dc0-4116-9d39-7be0d5f95ec2" />
 
-**3. Matchup Modeling vs Opponent 5-Man Units**
-Evaluates Syracuse lineups against specific ACC opponent lineups:
+**Substitution Assistant**
+<img width="1440" height="777" alt="Screenshot 2026-02-24 at 2 25 46 PM" src="https://github.com/user-attachments/assets/c9e92647-e5de-4b62-b915-604bedbeb6ad" />
 
-- Auto (Top 5 by minutes)
-- Archetype (Big / Small / Shooting / Defense)
-- Manual selection
-- Includes a Level-1 matchup adjustment modeling:
-- Defensive edge vs opponent ORtg
-- Turnover risk vs opponent pressure
+**Matchup vs Opponent**
 
-**4. Substitution Assistant**
-Given a current 5-man lineup, the tool:
-
-- Simulates all valid 1-for-1 substitutions
-- Scores each swap under current objective
-- Returns ranked substitution recommendations
-- Rebounding differential
+<img width="1440" height="775" alt="Screenshot 2026-02-24 at 2 17 23 PM" src="https://github.com/user-attachments/assets/9c177be7-e84b-4d8e-81a8-fc5083f1510a" />
 
 ## Modeling Approach
 
@@ -92,7 +75,6 @@ streamlit run app.py
 - app.py        → Streamlit interface + scoring engine
 - src/          → data processing / model scripts
 - data/         → input CSVs + trained model artifact
-- notebooks/    → model development experiments
 
 ## Limitations
 
