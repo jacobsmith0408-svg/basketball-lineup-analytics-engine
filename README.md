@@ -6,7 +6,7 @@ This application evaluates every viable 5-man lineup combination using advanced 
 
 Designed as a sports analytics / basketball operations tool.
 
-👉 **Live Demo:** https:basketball-lineup-analytics-engine.streamlit.app/
+👉 **Live Demo:** (https://basketball-lineup-analytics-engine.streamlit.app/)
 
 ## Core Capabilities
 **1. Lineup Optimization**
